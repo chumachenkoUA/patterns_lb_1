@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Лабораторна: ООП у JavaScript — Менеджер користувачів</title>
+    <link href="index.css" rel="stylesheet"/>
+    <script defer src="app.js"></script>
+</head>
+<body>
+<main class="container">
+    <h1>Менеджер користувачів (ООП у JS)</h1>
+
+    <section class="card">
+        <h2>Створити користувача</h2>
+        <form class="grid" id="createUserForm">
+            <label>
+                Ім’я
+                <input id="name" placeholder="ім'я" required type="text"/>
+            </label>
+
+            <label>
+                Email
+                <input id="email" placeholder="example@example.com" required type="email"/>
+            </label>
+
+            <label>
+                Пароль
+                <input id="password" placeholder="пароль" required type="password"/>
+            </label>
+
+            <label>
+                Роль
+                <select id="role" required>
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Moderator">Moderator</option>
+                    <option value="SuperAdmin">SuperAdmin</option>
+                </select>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Додати</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Список користувачів</h2>
+
+        <div class="table-wrap">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Роль</th>
+                    <th>Ім’я</th>
+                    <th>Email</th>
+                    <th>Попер.</th>
+                    <th>М’ют</th>
+                    <th>Дії</th>
+                </tr>
+                </thead>
+                <tbody id="usersTableBody"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>
